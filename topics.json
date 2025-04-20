@@ -1,0 +1,112 @@
+{
+  "machine_learning_intro": {
+    "title": "Introduction to Machine Learning",
+    "track": "Machine Learning",
+    "summary": "Machine Learning (ML) is a subfield of AI focused on the use of algorithms that can learn patterns from data without being explicitly programmed. It encompasses supervised, unsupervised, and reinforcement learning paradigms. Core methods include regression, classification, clustering, and model evaluation metrics. Understanding the trade-offs between bias and variance, overfitting, and model generalization is key for applying ML in production settings.",
+    "quiz": [
+      {
+        "question": "What is the key difference between supervised and unsupervised learning?",
+        "options": ["Supervised uses labeled data; unsupervised does not", "Supervised is faster", "Unsupervised requires more compute"],
+        "answer": "Supervised uses labeled data; unsupervised does not"
+      },
+      {
+        "question": "Which concept helps address overfitting in ML models?",
+        "options": ["Dropout", "Batch size", "Epochs"],
+        "answer": "Dropout"
+      },
+      {
+        "question": "What is reinforcement learning mainly used for?",
+        "options": ["Labeling data", "Decision-making via rewards", "Sorting values"],
+        "answer": "Decision-making via rewards"
+      }
+    ]
+  },
+  "exploratory_data_analysis": {
+    "title": "Exploratory Data Analysis (EDA)",
+    "track": "Data Analysis",
+    "summary": "EDA is the foundational step in any data science workflow. It involves summarizing datasets both visually and statistically to identify patterns, spot anomalies, test hypotheses, and check assumptions. Key tools include histograms, boxplots, pairplots, and correlation matrices. Advanced EDA extends to multivariate analysis, distributional assumptions, handling missing data patterns, and understanding feature interactions that may influence modeling decisions.",
+    "quiz": [
+      {
+        "question": "Which visualization is best for detecting outliers?",
+        "options": ["Histogram", "Boxplot", "Bar chart"],
+        "answer": "Boxplot"
+      },
+      {
+        "question": "What does a correlation matrix help identify?",
+        "options": ["Class imbalance", "Missing values", "Linear relationships between variables"],
+        "answer": "Linear relationships between variables"
+      },
+      {
+        "question": "Which technique helps visualize pairwise relationships in a dataset?",
+        "options": ["Boxplot", "Pairplot", "Line plot"],
+        "answer": "Pairplot"
+      }
+    ]
+  },
+  "business_analytics_fundamentals": {
+    "title": "Business Analytics Fundamentals",
+    "track": "Analytics",
+    "summary": "Business Analytics is the practice of using data to make strategic decisions and measure performance. Key concepts include tracking Key Performance Indicators (KPIs), customer acquisition costs, conversion funnels, and retention/churn metrics. Tools like SQL, Tableau, and Power BI are commonly used to explore business data and visualize insights. Modern analytics also integrates predictive models to guide decision-making under uncertainty.",
+    "quiz": [
+      {
+        "question": "Which metric is best used to measure customer retention?",
+        "options": ["Click-through rate", "Churn rate", "Conversion rate"],
+        "answer": "Churn rate"
+      },
+      {
+        "question": "Which tool is primarily used for business dashboarding?",
+        "options": ["Jupyter Notebook", "Power BI", "Anaconda"],
+        "answer": "Power BI"
+      },
+      {
+        "question": "Which of the following is NOT typically a KPI?",
+        "options": ["Monthly Active Users", "Revenue Growth", "Variable Encoding"],
+        "answer": "Variable Encoding"
+      }
+    ]
+  },
+  "deep_learning_vs_traditional_ml": {
+    "title": "Deep Learning vs Traditional ML",
+    "track": "Machine Learning",
+    "summary": "Traditional ML methods like decision trees, logistic regression, and SVMs require manual feature engineering and work well on structured/tabular data. Deep Learning, on the other hand, automatically learns hierarchical representations from raw data using neural networks. While DL excels at tasks like image recognition and NLP, it is compute-intensive, requires large datasets, and is less interpretable. Choosing between them depends on data type, complexity, and resource availability.",
+    "quiz": [
+      {
+        "question": "Which is a key strength of deep learning over traditional ML?",
+        "options": ["Less data required", "Automatic feature learning", "High interpretability"],
+        "answer": "Automatic feature learning"
+      },
+      {
+        "question": "Which type of data is deep learning especially good at?",
+        "options": ["Tabular spreadsheets", "Text and images", "SQL tables"],
+        "answer": "Text and images"
+      },
+      {
+        "question": "Which model requires more manual feature engineering?",
+        "options": ["CNN", "Decision Tree", "Transformer"],
+        "answer": "Decision Tree"
+      }
+    ]
+  },
+  "generative_ai_overview": {
+    "title": "Generative AI Overview",
+    "track": "Artificial Intelligence",
+    "summary": "Generative AI refers to models that can generate new content — text, images, code, or even music — based on learned patterns. Large Language Models (LLMs) like GPT and image generators like DALL·E use deep learning architectures (mostly transformers) trained on massive datasets. Applications span writing, design, education, and software development. Challenges include hallucinations, ethical concerns, and content control.",
+    "quiz": [
+      {
+        "question": "What architecture powers most modern generative AI models?",
+        "options": ["Convolutional Neural Networks", "Transformers", "Decision Trees"],
+        "answer": "Transformers"
+      },
+      {
+        "question": "Which of the following is an example of a Generative AI application?",
+        "options": ["Forecasting sales", "Image generation", "Churn analysis"],
+        "answer": "Image generation"
+      },
+      {
+        "question": "What is a known issue in LLMs where they generate made-up facts?",
+        "options": ["Overfitting", "Hallucination", "Latent bias"],
+        "answer": "Hallucination"
+      }
+    ]
+  }
+}
