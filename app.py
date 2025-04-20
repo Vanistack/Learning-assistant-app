@@ -7,8 +7,13 @@ st.title("📚 Your Daily Topic")
 
 # --- Load topics ---
 def load_all_topics(include_generated=True):
-    with open("topics.json", "r", encoding="utf-8") as f:
-        base = json.load(f)
+    base = {}
+    if os.path.exists("topics.json"):
+        with open("topics.json", "r", encoding="utf-8") as f:
+            base = json.load(f)
+    else:
+        st.error("⚠️ 'topics.json' not found. Please upload it to your app directory.")
+        st.stop()
 
     if include_generated and os.path.exists("new_topics.json"):
         with open("new_topics.json", "r", encoding="utf-8") as f:
