@@ -22,13 +22,24 @@ def load_all_topics(include_generated=True):
 
     return base
 
+# --- User Login ---
+st.sidebar.markdown("### 👤 User Login")
+username = st.sidebar.text_input("Enter your name", value="guest").strip().lower()
+
+if not username:
+    st.warning("Please enter a valid username.")
+    st.stop()
+
+st.sidebar.success(f"Logged in as: {username.capitalize()}")
+
+# --- Load topics ---
 include_generated = st.sidebar.checkbox("🧠 Include AI-Generated Topics", value=True)
 topics = load_all_topics(include_generated=include_generated)
 
 topic_keys = list(topics.keys())
 
-# --- Load progress ---
-progress_file = "progress.json"
+# --- Load user-specific progress ---
+progress_file = f"progress_{username}.json"
 if not os.path.exists(progress_file):
     with open(progress_file, "w") as f:
         json.dump({"last_index": -1, "completed": []}, f)
@@ -62,7 +73,7 @@ if mode == "📚 Review Completed Topics":
         answer = st.radio(
             f"{i}. {q['question']}",
             q["options"],
-            key=f"review_{i}",
+            key=f"review_{username}_{i}",
             index=None
         )
 
@@ -97,7 +108,7 @@ if mode == "🧠 Daily Learning":
 
     score = 0
     for i, q in enumerate(topic["quiz"], 1):
-        answer_key = f"daily_{topic_key}_{i}"
+        answer_key = f"daily_{username}_{topic_key}_{i}"
 
         user_answer = st.session_state.get(answer_key, None)
         if user_answer is None:
